@@ -1,15 +1,53 @@
-# opacity_button
+# OpacityButton 
 
-A new Flutter package project.
+[![Package Version](https://img.shields.io/pub/v/opacity_button?color=red)](https://github.com/lomsa-dev/http-mock-adapter "Published package version")
+[![LICENSE](https://img.shields.io/badge/License-MIT-red.svg)](https://github.com/lomsa-dev/http-mock-adapter#License "Project's LICENSE section")
 
-## Getting Started
+---
+## Installing
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+### Depend on it
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
-# opacity_button-
+Add this to your package's `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  opacity_button: ^0.1.0
+```
+
+### Install it
+
+You can install packages from the command line:
+
+```sh
+$ flutter pub get
+...
+```
+### Import it
+
+Now in your Dart code, you can use:
+
+```dart
+import 'package:opacity_button/opacity_button.dart';
+```
+---
+## Usage 
+<img src="https://github.com/theiskaa/opacity_button/blob/develop/example/overview/overview.gif?raw=true" align = "right" height = "200px">
+
+```dart
+OpacityButton(
+  // Required to take a widget.
+  child: Image.network("https://picsum.photos/200/300"),
+
+  onLongPress: () {
+    // Do something...
+  }
+
+  // Customize the degree of opacity when the button is pressed.
+  opacityValue: .3,
+
+  // Always include semantics of opacity.
+  alwaysIncludeSemantics: false,
+),
+```
+
