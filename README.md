@@ -1,4 +1,4 @@
-# OpacityButton 
+# Opacity Button 
 
 [![Package Version](https://img.shields.io/pub/v/opacity_button?color=red)](https://github.com/lomsa-dev/http-mock-adapter "Published package version")
 [![LICENSE](https://img.shields.io/badge/License-MIT-red.svg)](https://github.com/lomsa-dev/http-mock-adapter#License "Project's LICENSE section")
@@ -12,7 +12,10 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  opacity_button: ^0.1.0
+  carousel_pro:
+    git:
+      url: git://github.com/theiskaa/opacity_button.git 
+      ref: main
 ```
 
 ### Install it
