@@ -32,7 +32,7 @@ import 'package:opacity_button/opacity_button.dart';
 ```
 ---
 ## Usage 
-<img src="https://raw.githubusercontent.com/theiskaa/opacity_button/develop/example/overview/overview.gif?token=AOCUPZNTFPBEWDEE4OQAW23AN3GAE" align = "right" height = "300px">
+<img src="https://github.com/theiskaa/opacity_button/blob/develop/example/overview/overview.gif?raw=true" align = "right" height = "300px">
 
 ```dart
 OpacityButton(
