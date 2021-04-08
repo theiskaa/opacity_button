@@ -12,7 +12,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  opacity_button: ^1.0.0
+  opacity_button: ^0.1.0
 ```
 
 ### Install it
