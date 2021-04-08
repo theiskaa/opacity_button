@@ -65,36 +65,36 @@ class OpacityButton extends StatefulWidget {
 class _OpacityButtonState extends State<OpacityButton> {
   bool _isTapped = false;
 
-  // Change value of [_isTapped] to `true`
+  // Change value of [_isTapped] to `true`.
   void _setToTrue() => setState(() => _isTapped = true);
 
-  // Change value of [_isTapped] to `false`
+  // Change value of [_isTapped] to `false`.
   void _setToFalse() => setState(() => _isTapped = false);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       // Listen user's [touching/tapingDown] to button and change [_isTapped] with `true`.
-      onTapDown: (d) => (widget.onTap != null) ? _setToTrue() : null,
+      onTapDown: (_) => (widget.onTap != null) ? _setToTrue() : null,
 
       // Listen user's [touching/tapingCancel] and change [_isTapped] with `false`.
       onTapCancel: () => (widget.onTap != null) ? _setToFalse() : null,
 
       // Listen user's [touching/tapingUp], change [_isTapped] with `false`.
-      // and run [onTap] function.
-      onTapUp: (d) {
+      // And run [onTap] function.
+      onTapUp: (_) {
         if (widget.onTap != null) {
           _setToFalse();
           return widget.onTap!();
         }
       },
 
-      /// When Long Press Start set [_isTapped] to true.
-      onLongPressStart: (d) =>
+      // When Long Press Start set [_isTapped] to true.
+      onLongPressStart: (_) =>
           (widget.onLongPress != null) ? _setToTrue() : null,
 
-      /// When Long press end, set [_isTapped] to false & call [onLongPress] function.
-      onLongPressEnd: (d) {
+      // When Long press end, set [_isTapped] to false & call [onLongPress] function.
+      onLongPressEnd: (_) {
         if (widget.onLongPress != null) {
           _setToFalse();
           return widget.onLongPress!();
@@ -105,8 +105,8 @@ class _OpacityButtonState extends State<OpacityButton> {
     );
   }
 
-  /// The body of [OpacityButton]
-  _buttonBody() => Opacity(
+  // The body of [OpacityButton].
+  Opacity _buttonBody() => Opacity(
         opacity: _opacityValue,
         child: widget.child,
         alwaysIncludeSemantics: (widget.alwaysIncludeSemantics != null)
@@ -114,15 +114,6 @@ class _OpacityButtonState extends State<OpacityButton> {
             : false,
       );
 
-  // Get right opacity value by listening value of [_isTapped]
-  double get _opacityValue {
-    switch (_isTapped) {
-      case true:
-        return widget.opacityValue;
-      case false:
-        return 1;
-      default:
-        return 1;
-    }
-  }
+  // Get right opacity value by listening value of [_isTapped].
+  double get _opacityValue => _isTapped ? widget.opacityValue : 1;
 }

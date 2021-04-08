@@ -32,24 +32,21 @@ import 'package:opacity_button/opacity_button.dart';
 ```
 ---
 ## Usage 
-<img src="https://github.com/theiskaa/opacity_button/blob/develop/example/overview/overview.gif?raw=true" align = "right" height = "300px">
+<img src="https://github.com/theiskaa/opacity_button/blob/develop/example/overview/overview.gif?raw=true" align = "right" height = "200px">
 
 ```dart
 OpacityButton(
-  // required to take a widget 
+  // Required to take a widget.
   child: Image.network("https://picsum.photos/200/300"),
 
-  onTap: () {
-    // do something..
-  }
   onLongPress: () {
-    // do something..
+    // Do something...
   }
 
-  // Customize the degree of opacity when the button is pressed
+  // Customize the degree of opacity when the button is pressed.
   opacityValue: .3,
 
-  ///  Always Include Semantics of Opacity.
+  // Always include semantics of opacity.
   alwaysIncludeSemantics: false,
 ),
 ```

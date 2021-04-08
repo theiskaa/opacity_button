@@ -27,15 +27,14 @@ void main() {
   testWidgets('Opacity Button Test', (WidgetTester tester) async {
     await tester.pumpWidget(mainWidget);
 
-    // mainWidget tests.
+    // MainWidget tests.
     expect(find.byType(MaterialApp), findsOneWidget);
     expect(find.byType(Scaffold), findsOneWidget);
     expect(find.byType(Center), findsOneWidget);
 
-    // opacityButton tests.
+    // OpacityButton tests.
     expect(find.byType(GestureDetector), findsOneWidget);
     expect(find.byType(Opacity), findsOneWidget);
-
 
     // Gesture tests.
     await tester.tap(find.byType(OpacityButton));
