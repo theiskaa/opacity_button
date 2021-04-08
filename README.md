@@ -1,10 +1,9 @@
 # OpacityButton 
 
-[![Package Version](https://img.shields.io/pub/v/opacity_button?color=teal)](https://github.com/lomsa-dev/http-mock-adapter "Published package version")
+[![Package Version](https://img.shields.io/pub/v/opacity_button?color=red)](https://github.com/lomsa-dev/http-mock-adapter "Published package version")
 [![LICENSE](https://img.shields.io/badge/License-MIT-red.svg)](https://github.com/lomsa-dev/http-mock-adapter#License "Project's LICENSE section")
 
 ---
-
 ## Installing
 
 ### Depend on it
@@ -13,7 +12,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  opacity_button: ^0.0.1
+  opacity_button: ^1.0.0
 ```
 
 ### Install it
@@ -49,5 +48,9 @@ OpacityButton(
 
   // Customize the degree of opacity when the button is pressed
   opacityValue: .3,
+
+  ///  Always Include Semantics of Opacity.
+  alwaysIncludeSemantics: false,
 ),
 ```
+

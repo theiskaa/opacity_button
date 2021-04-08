@@ -1,3 +1,4 @@
-## [0.0.1] - TODO: Add release date.
-
-* TODO: Describe initial release.
+## [1.0.0] - 8/4/2021
+ - First release of [OpacityButton] 
+ - **Properties**:
+ - `child`, `onTap`, `onLongPress`, `opacityValue`, `alwaysIncludeSemantics` 
