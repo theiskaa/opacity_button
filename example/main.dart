@@ -24,8 +24,8 @@ class Home extends StatelessWidget {
           children: [
             OpacityButton(
               child: Image.network("https://picsum.photos/200/300"),
-              onTap: () => print("Fuck"),
-              onLongPress: () => print("Fuck basirlarr"),
+              onTap: () => print("Tapped"),
+              onLongPress: () => print("Long Pressed"),
               opacityValue: .3,
             ),
           ],
