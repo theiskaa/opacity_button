@@ -1,5 +1,5 @@
 name: opacity_button
-description: Opacity Button which help us to convert any widget to button (opacity)
+description: Opacity Button which make able to convert any widget to button with opacity animation.
 version: 1.0.0
 author:
 homepage:
