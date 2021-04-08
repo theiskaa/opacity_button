@@ -10,11 +10,11 @@ import 'package:flutter/material.dart';
 ///  );
 /// ```
 /// You can't go blank [child] property, it's required.
-/// `opacityValue`: is 0.5 as default, if you wanna change 
+/// `opacityValue`: is 0.5 as default, if you wanna change
 /// it to your custom value, then should use it.
-/// 
+///
 /// `onTap` and `onLongPress` is not required but should be use :)
-/// 
+///
 class OpacityButton extends StatefulWidget {
   /// Gets a widget that the child element will build on the button
   final Widget child;
@@ -29,7 +29,7 @@ class OpacityButton extends StatefulWidget {
   /// This triggers when the tap gesture wins. If the tap gesture did not win,
   /// [onTapCancel] is called instead.
   /// that's means opacity value will decrease to one, ie zero
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
   /// Called when a long press gesture with a primary button has been recognized.
   ///
@@ -38,7 +38,7 @@ class OpacityButton extends StatefulWidget {
   ///
   /// When this happens, the opacity value will decrease to the value you define
   /// or the to the default value.
-  final VoidCallback onLongPress;
+  final VoidCallback? onLongPress;
 
   /// Whether the semantic information of the children is always included.
   ///
@@ -47,11 +47,11 @@ class OpacityButton extends StatefulWidget {
   /// When true, regardless of the opacity settings the child semantic information is exposed as if the widget were fully visible.
   /// This is useful in cases where labels may be hidden during animations that would otherwise contribute relevant semantics.[alwaysIncludeSemantics] defaultly was setted to `false`
   /// if user wanna change it to `true` then should use it.
-  final bool alwaysIncludeSemantics;
+  final bool? alwaysIncludeSemantics;
 
   const OpacityButton({
-    Key key,
-    @required this.child,
+    Key? key,
+    required this.child,
     this.opacityValue = .5,
     this.onTap,
     this.onLongPress,
@@ -85,7 +85,7 @@ class _OpacityButtonState extends State<OpacityButton> {
       onTapUp: (d) {
         if (widget.onTap != null) {
           _setToFalse();
-          return widget.onTap();
+          return widget.onTap!();
         }
       },
 
@@ -97,7 +97,7 @@ class _OpacityButtonState extends State<OpacityButton> {
       onLongPressEnd: (d) {
         if (widget.onLongPress != null) {
           _setToFalse();
-          return widget.onLongPress();
+          return widget.onLongPress!();
         }
       },
 
@@ -110,7 +110,7 @@ class _OpacityButtonState extends State<OpacityButton> {
         opacity: _opacityValue,
         child: widget.child,
         alwaysIncludeSemantics: (widget.alwaysIncludeSemantics != null)
-            ? widget.alwaysIncludeSemantics
+            ? widget.alwaysIncludeSemantics!
             : false,
       );
 
@@ -119,7 +119,6 @@ class _OpacityButtonState extends State<OpacityButton> {
     switch (_isTapped) {
       case true:
         return widget.opacityValue;
-        break;
       case false:
         return 1;
       default:
