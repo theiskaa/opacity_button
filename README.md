@@ -12,7 +12,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  carousel_pro:
+  opacity_button:
     git:
       url: git://github.com/theiskaa/opacity_button.git 
       ref: main
